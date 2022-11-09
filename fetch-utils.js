@@ -19,7 +19,7 @@ export async function getCountries(continent) {
 
 export async function getContinents() {
     // Slice B: write an awaited client query to country_continent table and get all columns
-    let query = client.from('continents').select('*').order('name').limit(25); // I don't think there are 25 continents but just in case we colonize mars or something
+    let query = client.from('country_continents').select('*').order('name').limit(25); // I don't think there are 25 continents but just in case we colonize mars or something
 
     // Slice B: return the response
     const response = await query;
